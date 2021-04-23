@@ -7,8 +7,11 @@ This is an open-source project to build a low-cost Commercial-Off-The-Shelf on-b
 * [Commercial-Off-The-Shelf in Space](#commercial-off-the-shelf-in-space)
 * [Hardware Development](#hardware-development)
   * [Features](#features)
+  * [Manufacturing](#manufacturing)
 * [Firmware Development](#firmware-development)
   * [Peripheral Access Crate](#peripheral-access-crate)
+  * [Application Layer](#application-layer)
+  * [Toolchain](#toolchain)
 
 ## Commercial-Off-The-Shelf in Space
 The Ferro-electric RAM cell is robust against various Single Event Effects.
@@ -17,8 +20,6 @@ TODO
 
 ## Hardware Development
 The design is centered around the series of Ferroelectric-RAM based Microcontroller Units from Texas Instruments. The first prototype is using the [MSP430FR6972IPMR](https://www.ti.com/store/ti/en/p/product/?p=MSP430FR6972IPMR).  
-
-<b>You can find the schematics, gerber files and bill of materials in the [hardware folder](https://github.com/chrismolli/ProjectInertia/tree/main/hardware).</b>
 
 ### Features
 The current hardware design (`iteration 1`) features the following:
@@ -38,6 +39,9 @@ The current hardware design (`iteration 1`) features the following:
 - CubeSat size
   - `1/4 U` or (`5cm x 5cm`)
 
+### Manufacturing
+You can find the schematics, gerber files and bill of materials in the [hardware folder](https://github.com/chrismolli/ProjectInertia/tree/main/hardware).
+
 ## Firmware Development
 The firmware is being developed using [Embedded Rust](http://www.rust-embedded.org) to explore the versatility of this language in a environment with extremely limited resources and the need for high reliability. Useful resources may be obtained from the [awesome embedded Rust list](https://github.com/rust-embedded/awesome-embedded-rust).
 
@@ -50,3 +54,6 @@ In the first version only a few features shall be tested.
 - Telemetry & Telecommand handling on UART (TODO)
 - Configuration Storage in external Memory (TODO)
 - Current Monitoring (TODO)
+
+### Toolchain
+TODO
