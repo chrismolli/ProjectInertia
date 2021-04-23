@@ -1,5 +1,5 @@
 # ProjectInertia
-This is an open-source project to build a low-cost Commercial-Off-The-Shelf on-board computer for small CubeSat missions. At this point in time it is mostly a playground to test out new technologies and learn from it. The first hardware prototype is currently in production.
+This is an open-source project to build a low-cost Commercial-Off-The-Shelf on-board computer for small CubeSat missions. At this point in time it is mostly a playground to test out new technologies and learn from it. The first hardware prototype (`iteration 1`) is currently in production.
 
 [<img src="https://github.com/chrismolli/ProjectInertia/raw/main/figures/banner.png" align="right" width="256">](https://github.com/chrismolli/ProjectInertia)
 
