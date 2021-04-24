@@ -1,5 +1,5 @@
 # ProjectInertia
-This is an open-source project to build a low-cost Commercial-Off-The-Shelf on-board computer for small CubeSat missions providing extremely low power usage and tolerance to radiation effects. At this point in time it is mostly a playground to test out new technologies and learn from it. The first hardware prototype ([iteration 1](https://github.com/chrismolli/ProjectInertia/tree/main/hardware/iteration%201)) is currently in production.
+This is an open-source project to build a low-cost Commercial-Off-The-Shelf on-board computer for small CubeSat missions providing extremely low power usage and tolerance to radiation effects. At this point in time it is mostly a playground to test out new technologies and learn from it. The first hardware prototype (`iteration 1`) is currently in production.
 
 [<img src="https://github.com/chrismolli/ProjectInertia/raw/main/figures/banner.png" align="right" width="256">](https://github.com/chrismolli/ProjectInertia)
 
@@ -14,9 +14,9 @@ This is an open-source project to build a low-cost Commercial-Off-The-Shelf on-b
   * [Toolchain](#toolchain)
 
 ## Commercial-Off-The-Shelf in Space
-The Ferro-electric RAM cell is robust against various Single Event Effects.
+The usage of Commercial-Off-The-Shelf (COTS) components in Space has been a topic of research for many years already due to the benefits of higher performance and lower costs, when compared to their radiation hardened counterparts. However COTS components are subject to a manifold of radiation induced failure modes, that need to be considered during system design (SRC).  
 
-TODO
+This project propose the use of a COTS microcontroller that is based on Ferro-Electric RAM. The Ferro-electric RAM cell itself is resilient against various Single Event Effects (ADD SRC). However the peripherals within the respective integrated circuit might still experience Single Event Effects (ADD SRC). 
 
 ## Hardware Development
 The design is centered around the series of Ferroelectric-RAM based Microcontroller Units from Texas Instruments. The first prototype is using the [MSP430FR6972IPMR](https://www.ti.com/store/ti/en/p/product/?p=MSP430FR6972IPMR).  
@@ -28,7 +28,7 @@ The current hardware design (`iteration 1`) features the following:
   - An internal watchdog circuit to recover from Funcional Interrupts
 - An external 16 kB FRAM non-volatile memory
 - Latch-Up Detection
-  - Circuit Breaker implementation for <b>automatic Latch-Up Protection</b>
+  - Circuit Breaker implementation for automatic Latch-Up Protection
   - Current Monitoring
 - 5V or 12V input power sources
 - I/Os
