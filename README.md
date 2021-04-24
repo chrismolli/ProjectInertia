@@ -56,10 +56,14 @@ The PAC has been succesfully created for the MSP430FR6972 chip used in prototype
 - [`msp430fr6972`](https://crates.io/crates/msp430fr6972) (beta) ![Crates.io](https://img.shields.io/crates/v/msp430fr6972)
 
 ### Application layer
-In the first version only a few features shall be tested.
+In the first version only a few features shall be tested:
 - Telemetry & Telecommand handling on UART (TODO)
 - Configuration Storage in external Memory (TODO)
 - Current Monitoring (TODO)
 
 ### Toolchain
-TODO
+The current toolchain uses:
+- Rust `Edition 2018` (nightly)
+- [`msp430-gcc-elf`](https://www.ti.com/tool/MSP430-GCC-OPENSOURCE) compiler
+- [`MSP430Ware`](https://www.ti.com/tool/MSPWARE) tools provided by Texas Instruments
+  - `MSP430Flasher` JTAG flasher
