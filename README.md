@@ -39,6 +39,8 @@ The current hardware design ([`iteration 1`](https://github.com/chrismolli/Proje
 - CubeSat size
   - `1/4 U` or (`5cm x 5cm`)
 
+[<img src="https://github.com/chrismolli/ProjectInertia/raw/main/figures/flatview.png" align="center" width="1300">](https://github.com/chrismolli/ProjectInertia)
+
 ### Manufacturing
 You can find the schematics, gerber files and bill of materials in the [hardware folder](https://github.com/chrismolli/ProjectInertia/tree/main/hardware).
 
