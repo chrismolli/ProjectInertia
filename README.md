@@ -16,7 +16,7 @@ This is an open-source project to build a low-cost Commercial-Off-The-Shelf on-b
 ## Commercial-Off-The-Shelf in Space
 The usage of Commercial-Off-The-Shelf (COTS) components in Space has been a topic of research for many years already due to the benefits of higher performance and lower costs, when compared to their radiation hardened counterparts.
 
-However COTS components are subject to a manifold of radiation induced failure modes, that need to be considered during system design [[Sandia2018](https://www.osti.gov/servlets/purl/1481565)]. Destructive Latch-Up events are automatically detected and mitigated by a on-board circuit breaker. After a hold-down time of some dozen µs, the board is reconnected to the power source. This project proposes the use of a COTS microcontroller that is based on Ferro-Electric RAM. The Ferro-Electric RAM cell itself is resilient against various Single Event Effects [[Fetahovic2017](https://www.researchgate.net/publication/322940214_Overview_of_radiation_effects_on_emerging_non-volatile_memory_technologies)]. However the peripherals within the respective integrated circuit might still experience Single Event Effects [[Bosser2018](https://www.osti.gov/servlets/purl/1483658)]. These will be recovered by the internal watchdog circuit, present in the microcontroller hardware. 
+However COTS components are subject to a manifold of radiation induced failure modes, that need to be considered during system design [[Sandia2018](https://www.osti.gov/servlets/purl/1481565)]. Destructive Latch-Up events are automatically detected and mitigated by a on-board circuit breaker. After a hold-down time of some dozen µs, the board is reconnected to the power source. This project proposes the use of a COTS microcontroller that is based on Ferro-Electric RAM. The Ferro-Electric RAM cell itself is resilient against various Single Event Effects [[Fetahovic2017](https://www.researchgate.net/publication/322940214_Overview_of_radiation_effects_on_emerging_non-volatile_memory_technologies)]. However the peripherals within the respective integrated circuit might still experience Single Event Effects [[Bosser2018](https://www.osti.gov/servlets/purl/1483658)]. These will be recovered by the internal watchdog circuit, present in the microcontroller hardware.
 
 Developing hard- and software for Space application does require a lot of careful design. Thus, this project aims for the most simple and very low cost design to minimize potential sources of faults.
 
@@ -43,7 +43,7 @@ The current hardware design ([`iteration 1`](https://github.com/chrismolli/Proje
 - CubeSat Size
   - `1/4 U` or (`5cm x 5cm`)
 
-[<img src="https://github.com/chrismolli/ProjectInertia/raw/main/figures/flatview.png" align="center" width="1300">]
+<img src="https://github.com/chrismolli/ProjectInertia/raw/main/figures/flatview.png" align="center" width="1300">
 
 ### Manufacturing
 You can find the schematics, gerber files and bill of materials in the [hardware folder](https://github.com/chrismolli/ProjectInertia/tree/main/hardware).
