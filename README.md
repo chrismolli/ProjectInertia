@@ -10,7 +10,6 @@ This is an open-source project to build a low-cost Commercial-Off-The-Shelf on-b
   * [Manufacturing](#manufacturing)
 * [Firmware Development](#firmware-development)
   * [Peripheral Access Crate](#peripheral-access-crate)
-  * [Application Layer](#application-layer)
   * [Toolchain](#toolchain)
 
 ## Commercial-Off-The-Shelf in Space
