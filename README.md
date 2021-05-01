@@ -39,6 +39,7 @@ The current hardware design ([`iteration 1`](https://github.com/chrismolli/Proje
   - 2 x UART
   - 1 x I<sup>2</sup>C
   - JTAG Programming Interface
+  - `3.3V` output for peripherals
   - Screw Terminals for all Interfaces
 - CubeSat Size
   - `1/4 U` or (`5cm x 5cm`)
@@ -55,15 +56,7 @@ The firmware is being developed using [Embedded Rust](http://www.rust-embedded.o
 The PAC has been succesfully created for the MSP430FR6972 chip used in prototype [`iteration 1`](https://github.com/chrismolli/ProjectInertia/tree/main/hardware/iteration%201).  
 - [`msp430fr6972`](https://crates.io/crates/msp430fr6972) (beta) ![Crates.io](https://img.shields.io/crates/v/msp430fr6972)
 
-### Application layer
-In the first version only a few features shall be tested:
-- Telemetry & Telecommand handling on UART (TODO)
-- Configuration Storage in external Memory (TODO)
-- Current Monitoring (TODO)
-
 ### Toolchain
 The current toolchain uses:
 - Rust `Edition 2018` (nightly)
 - [`msp430-gcc-elf`](https://www.ti.com/tool/MSP430-GCC-OPENSOURCE) compiler
-- [`MSP430Ware`](https://www.ti.com/tool/MSPWARE) tools provided by Texas Instruments
-  - `MSP430Flasher` JTAG flasher
