@@ -1,0 +1,26 @@
+[package]
+name = "intertia_fw"
+version = "0.1.0"
+authors = ["chrismolli <molliere.c@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+msp430 = "0.2.2"
+msp430-rt = "0.2.4"
+panic-msp430 = "0.2.0"
+
+[dependencies.msp430fr6972]
+version = "0.2.0"
+features = ["rt"]
+
+[[bin]]
+name = "inertia_fw"
+path = "src/main.rs"
+test = false
+bench = false
+
+[profile.release]
+opt-level = "s" # Size is more important than performance on MSP430.
+codegen-units = 1 # Better size optimization.
+lto = "fat" # _Much_ better size optimization.
+# debug = true # Debug _can_ slightly increase size of .text segment.
