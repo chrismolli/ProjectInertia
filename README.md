@@ -15,9 +15,9 @@ This is an open-source project to build a low-cost Commercial-Off-The-Shelf on-b
 ## Commercial-Off-The-Shelf in Space
 The usage of Commercial-Off-The-Shelf (COTS) components in Space has been a topic of research for many years already due to the benefits of higher performance and lower costs, when compared to their radiation hardened counterparts.
 
-However COTS components are subject to a manifold of radiation induced failure modes, that need to be considered during system design [[Sandia2018](https://www.osti.gov/servlets/purl/1481565)]. Destructive Latch-Up events are automatically detected and mitigated by a on-board circuit breaker. After a hold-down time of some dozen µs, the board is reconnected to the power source. This project proposes the use of a COTS microcontroller that is based on Ferro-Electric RAM. The Ferro-Electric RAM cell itself is resilient against various Single Event Effects [[Fetahovic2017](https://www.researchgate.net/publication/322940214_Overview_of_radiation_effects_on_emerging_non-volatile_memory_technologies)]. However the peripherals within the respective integrated circuit might still experience Single Event Effects [[Bosser2018](https://www.osti.gov/servlets/purl/1483658)]. These will be recovered by the internal watchdog circuit, present in the microcontroller hardware.
+However, COTS components are subject to a manifold of radiation induced failure modes, that need to be considered during system design [[Sandia2018](https://www.osti.gov/servlets/purl/1481565)]. Destructive Latch-Up events are automatically detected and mitigated by an on-board circuit breaker. After a hold-down time of some dozen µs, the board is reconnected to the power source. This project proposes the use of a COTS microcontroller that is based on Ferro-Electric RAM. The Ferro-Electric RAM cell itself is resilient against various Single Event Effects [[Fetahovic2017](https://www.researchgate.net/publication/322940214_Overview_of_radiation_effects_on_emerging_non-volatile_memory_technologies)]. However, the peripherals within the respective integrated circuit might still experience Single Event Effects [[Bosser2018](https://www.osti.gov/servlets/purl/1483658)]. These will be recovered by the internal watchdog circuit, present in the microcontroller hardware.
 
-Developing hard- and software for Space application does require a lot of careful design. Thus, this project aims for the most simple and very low cost design to minimize potential sources of faults.
+Developing hard- and software products for Space application do require a lot of careful design choices. Thus, this project aims for the most simple and very low cost design to minimize potential sources for failures.
 
 ## Hardware Development
 The design is centered around the series of Ferroelectric-RAM based Microcontroller Units from Texas Instruments. The first prototype is using the [MSP430FR6972IPMR](https://www.ti.com/store/ti/en/p/product/?p=MSP430FR6972IPMR).  
@@ -61,3 +61,4 @@ The PAC has been succesfully created for the MSP430FR6972 chip used in prototype
 The current toolchain uses:
 - Rust `Edition 2018` (nightly)
 - [`msp430-gcc-elf`](https://www.ti.com/tool/MSP430-GCC-OPENSOURCE) compiler
+- [`msp430-bsl-python`](https://github.com/chrismolli/msp430-bsl-python) programmer
