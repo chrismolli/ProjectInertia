@@ -54,7 +54,7 @@ You can find the schematics, gerber files and bill of materials in the [hardware
 The firmware is being developed using [Embedded Rust](http://www.rust-embedded.org) to explore the versatility of this language in a environment with extremely limited resources and the need for high reliability. Useful resources may be obtained from the [awesome embedded Rust list](https://github.com/rust-embedded/awesome-embedded-rust).
 
 ### Peripheral Access Crate
-The PAC has been succesfully created for the MSP430FR6972 chip used in prototype [`iteration 1`](https://github.com/chrismolli/ProjectInertia/tree/main/hardware/iteration%201).  
+The PAC has been successfully created for the MSP430FR6972 chip used in prototype [`iteration 1`](https://github.com/chrismolli/ProjectInertia/tree/main/hardware/iteration%201).  
 - [`msp430fr6972`](https://crates.io/crates/msp430fr6972) (beta) ![Crates.io](https://img.shields.io/crates/v/msp430fr6972)
 
 ### Toolchain
