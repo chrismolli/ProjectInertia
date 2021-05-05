@@ -11,6 +11,8 @@ mod sys;
 mod led;
 mod uart;
 mod time;
+mod clk;
+mod fram;
 
 #[entry]
 fn main() -> ! {
@@ -20,14 +22,24 @@ fn main() -> ! {
     sys::init();
 
     /*
+        Change Clock Source to HFX
+    */
+    clk::init_dco();
+
+    /*
         Init peripherals
     */
     led::init();
-    uart::init(115_200);
+    uart::init_uart1();
+
+    let msg = "Hello World!\n\r";
 
     loop {
+        uart::write(&msg.as_bytes());
+
         led::toggle();
-        time::delay(100_000);
+
+        time::delay(200_000);
     }
 }
 
