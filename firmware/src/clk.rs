@@ -28,9 +28,19 @@ const DIVS_4 : u16 = 0x0020;
 const DIVM_4 : u16 = 0x0002;
 
 /*
+    Enums
+*/
+pub enum ClockSources{
+    Vlo,
+    Doc,
+    Lfxt,
+    Hfxt,
+}
+
+/*
     Functions
 */
-pub fn init_dco() {
+pub fn init() {
     /*
         initializes DCO at 8 MHz
     */

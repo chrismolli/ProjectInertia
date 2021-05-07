@@ -1,18 +1,23 @@
 #![no_main]
 #![no_std]
 #![feature(abi_msp430_interrupt)]
+#![allow(unused_variables)]
+#![allow(dead_code)]
 
 extern crate panic_msp430;
 
 use msp430_rt::entry;
 use msp430fr6972::interrupt;
 
+use heapless::String;
+
 mod sys;
 mod led;
 mod uart;
 mod time;
 mod clk;
-mod fram;
+mod error_codes;
+mod adc;
 
 #[entry]
 fn main() -> ! {
@@ -22,23 +27,35 @@ fn main() -> ! {
     sys::init();
 
     /*
-        Change Clock Source to HFX
+        Change Clock Source to DOC
     */
-    clk::init_dco();
+    clk::init();
 
     /*
         Init peripherals
     */
     led::init();
-    uart::init_uart1();
+    uart::init(uart::UartNum::Uart1);
+    adc::init();
 
-    let msg = "Hello World!\n\r";
+    /*
+        Init String Buffer
+    */
+    let mut msg1 : String<32> = String::from("ADC Value: ");
+    let mut msg2 : String<32>;
 
     loop {
-        uart::write(&msg.as_bytes());
+
+        match adc::read(){
+            Ok(val) => msg2 = String::from(val),
+            Err(_) => msg2 = String::from("None"),
+        };
+
+        uart::write(uart::UartNum::Uart1, &msg1.as_bytes());
+        uart::write(uart::UartNum::Uart1, &msg2.as_bytes());
+        uart::write(uart::UartNum::Uart1, &"\n\r".as_bytes());
 
         led::toggle();
-
         time::delay(200_000);
     }
 }

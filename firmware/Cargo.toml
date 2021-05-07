@@ -8,9 +8,10 @@ edition = "2018"
 msp430 = "0.2.2"
 msp430-rt = "0.2.4"
 panic-msp430 = "0.2.0"
+heapless = "0.7.0"
 
 [dependencies.msp430fr6972]
-version = "0.2.0"
+version = "0.2.1"
 features = ["rt"]
 
 [[bin]]
