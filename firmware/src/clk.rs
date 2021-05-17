@@ -1,7 +1,6 @@
 /*
     Imports
 */
-use crate::fram;
 use crate::time;
 
 /*
@@ -59,9 +58,7 @@ pub fn init() {
     }
 }
 
-pub fn get_clk_speeds() -> u32 {
-    /*
-        todo return clockspeeds
-    */
-    0
+pub fn get_clk_speed_mhz() -> u32 {
+    /* todo return by setting */
+    8
 }

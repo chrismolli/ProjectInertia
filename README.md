@@ -1,4 +1,8 @@
 # ProjectInertia
+<p align="center">
+  <img src="figures/inertia_prototype.jpg" width="1300">
+</p>
+
 This is an open-source project to build a low-cost Commercial-Off-The-Shelf on-board computer for small CubeSat missions providing extremely low power usage and tolerance to radiation effects. At this point in time it is mostly a playground to test out new technologies and learn from it. The first hardware prototype [`iteration 1`](https://github.com/chrismolli/ProjectInertia/tree/main/hardware/iteration%201) is currently in production.
 
 [<img src="https://github.com/chrismolli/ProjectInertia/raw/main/figures/banner.png" align="right" width="256">](https://github.com/chrismolli/ProjectInertia)

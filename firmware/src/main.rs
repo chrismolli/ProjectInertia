@@ -9,7 +9,7 @@ extern crate panic_msp430;
 use msp430_rt::entry;
 use msp430fr6972::interrupt;
 
-use heapless::String;
+use crate::uart::dbg_println;
 
 mod sys;
 mod led;
@@ -38,22 +38,12 @@ fn main() -> ! {
     uart::init(uart::UartNum::Uart1);
     adc::init();
 
-    /*
-        Init String Buffer
-    */
-    let mut msg1 : String<32> = String::from("ADC Value: ");
-    let mut msg2 : String<32>;
-
     loop {
 
         match adc::read(){
-            Ok(val) => msg2 = String::from(val),
-            Err(_) => msg2 = String::from("None"),
+            Ok(val) => dbg_println("ADC reads ",Some(val)),
+            Err(_) => dbg_println("Failed reading ADC",Some(1)),
         };
-
-        uart::write(uart::UartNum::Uart1, &msg1.as_bytes());
-        uart::write(uart::UartNum::Uart1, &msg2.as_bytes());
-        uart::write(uart::UartNum::Uart1, &"\n\r".as_bytes());
 
         led::toggle();
         time::delay(200_000);
